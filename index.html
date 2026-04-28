@@ -11,7 +11,7 @@
 
 <body>
 
-<a href="money.html" class="top-btn">💰お金モード</a>
+<a href="money.html" class="top-btn">💰給金モード</a>
 
 <div class="container">
   <h1>🎲 電車サイコロ旅</h1>
@@ -32,10 +32,12 @@
   </div>
 
   <div class="card">
-  <input id="station" placeholder="🚉 駅名">
-  <textarea id="memo" placeholder="📝 メモ"></textarea>
+  <input id="station" placeholder="🚉 到着駅名">
+  <textarea id="memo" placeholder="📝 立ち寄った場所・店"></textarea>
 
-  <button class="primary" onclick="saveEntry()">保存</button>
+  <button id="saveBtn" class="primary" onclick="saveEntry()" disabled>
+  保存
+</button>
   <button id="deleteBtn" class="danger" onclick="deleteEntry(editId)" style="display:none;">
     削除
   </button>

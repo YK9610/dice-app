@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>お金サイコロ</title>
+<title>給金サイコロ</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,7 @@
 
 <div class="container">
 
-  <h1>💰 お金サイコロ</h1>
+  <h1>💰 給金サイコロ</h1>
 
   <div class="dice-card">
 
@@ -31,16 +31,25 @@
   </div>
 </div>
 
-    <button class="primary" onclick="rollDice()">回す</button>
-    <button class="primary" onclick="confirmMoney()">決定</button>
+    <button class="primary" onclick="rollDice()">サイコロを回す</button>
+    <button class="primary" onclick="confirmMoney()">承認</button>
 
     <button class="secondary" onclick="resetTotal()">リセット</button>
 
   </div>
 
-  <h2>合計</h2>
-  <div id="total">0円</div>
+<h2>合計</h2>
+<div id="total">0円</div>
 
+<h3>使う</h3>
+<input id="spendInput" type="number" placeholder="使用金額">
+<input id="spendMemo" placeholder="支払い項目">
+<button id="spendBtn" class="secondary" onclick="spendMoney()" disabled>
+  使う
+</button>
+
+<h3>使用履歴</h3>
+<div id="moneyHistory"></div>
 </div>
 
 <audio id="diceSound" src="dice.mp3"></audio>

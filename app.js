@@ -164,3 +164,24 @@ window.onload = () => {
     navigator.serviceWorker.register("sw.js");
   }
 };
+
+function checkSave(){
+  const station = document.getElementById("station").value.trim();
+  const memo = document.getElementById("memo").value.trim();
+
+  const btn = document.getElementById("saveBtn");
+  btn.disabled = !(station && memo);
+}
+
+window.onload = () => {
+  loadHistory();
+
+  document.getElementById("station").addEventListener("input", checkSave);
+  document.getElementById("memo").addEventListener("input", checkSave);
+
+  checkSave();
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+};
