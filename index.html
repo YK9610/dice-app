@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電車サイコロ旅</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<a href="money.html" class="top-btn">💰お金モード</a>
+
+<div class="container">
+  <h1>🎲 電車サイコロ旅</h1>
+
+  <div class="dice-card">
+    <div class="scene">
+      <div id="dice" class="cube">
+        <div class="face one">1</div>
+        <div class="face two">2</div>
+        <div class="face three">3</div>
+        <div class="face four">4</div>
+        <div class="face five">5</div>
+        <div class="face six">6</div>
+      </div>
+    </div>
+
+    <button class="primary" onclick="rollDice()">サイコロを振る</button>
+  </div>
+
+  <div class="card">
+  <input id="station" placeholder="🚉 駅名">
+  <textarea id="memo" placeholder="📝 メモ"></textarea>
+
+  <button class="primary" onclick="saveEntry()">保存</button>
+  <button id="deleteBtn" class="danger" onclick="deleteEntry(editId)" style="display:none;">
+    削除
+  </button>
+</div>
+
+  <h2>履歴</h2>
+  <div id="history"></div>
+
+  <audio id="diceSound" src="dice.mp3"></audio>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 60px; /* ←これ重要 */
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.card, .dice-card {
+  background: white;
+  color: #111;
+  padding: 10px;
+  max-width: 360px;
+  margin: 10px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* サイコロ */
+.scene {
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.25,1,0.5,1);
+}
+
+.money-cube .face {
+  background: linear-gradient(145deg, #ffd700, #ffb700);
+  color: #222;
+  border: 1px solid #d4af37;
+
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.one   { transform: rotateY(0deg) translateZ(50px); }
+.two   { transform: rotateY(90deg) translateZ(50px); }
+.three { transform: rotateY(180deg) translateZ(50px); }
+.four  { transform: rotateY(-90deg) translateZ(50px); }
+.five  { transform: rotateX(90deg) translateZ(50px); }
+.six   { transform: rotateX(-90deg) translateZ(50px); }
+
+/* 入力 */
+input, textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* ボタン */
+button.primary {
+  width: 100%;
+  padding: 12px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 5px;
+}
+
+/* 履歴 */
+#history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.entry {
+  background: white;
+  color: #111;
+  padding: 12px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  text-align: left;
+}
+.entry.editing {
+  background: #fff3cd;
+  border: 2px solid orange;
+  transform: scale(1.02);
+}
+
+.top-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #007aff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  z-index: 999;
+}
+
+#total {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #fff;
+
+  /* 見やすくするための強調 */
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,9 @@
+{
+  "name": "電車サイコロ旅",
+  "short_name": "サイコロ旅",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007aff",
+  "icons": []
+}

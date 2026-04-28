@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お金サイコロ</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="index.html" class="top-btn">🎲旅モード</a>
+
+<div class="container">
+
+  <h1>💰 お金サイコロ</h1>
+
+  <div class="dice-card">
+
+    <div class="scene">
+  <div id="dice" class="cube money-cube">
+
+    <div class="face one">¥500</div>
+<div class="face two">¥500</div>
+<div class="face three">¥1,000</div>
+<div class="face four">¥1,000</div>
+<div class="face five">¥1,500</div>
+<div class="face six">¥2,000</div>
+
+  </div>
+</div>
+
+    <button class="primary" onclick="rollDice()">回す</button>
+    <button class="primary" onclick="confirmMoney()">決定</button>
+
+    <button class="secondary" onclick="resetTotal()">リセット</button>
+
+  </div>
+
+  <h2>合計</h2>
+  <div id="total">0円</div>
+
+</div>
+
+<audio id="diceSound" src="dice.mp3"></audio>
+
+<script src="money.js"></script>
+
+</body>
+</html>
