@@ -36,7 +36,7 @@ function saveEntry() {
   const memo = document.getElementById("memo");
 
   if (!currentDice) {
-    alert("サイコロ振って");
+    alert("サイコロが振られていません");
     return;
   }
 
@@ -149,7 +149,7 @@ function resetEditUI(){
   memo.style.border = "";
 
   station.placeholder = "🚉 駅名";
-  memo.placeholder = "📝 メモ";
+  memo.placeholder = "📝 立ち寄った場所・店";
 }
 
 function updateDeleteBtn(show){
