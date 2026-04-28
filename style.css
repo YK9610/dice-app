@@ -78,12 +78,12 @@ h1, h2 {
   font-weight: bold;
 }
 
-.one   { transform: rotateY(0deg) translateZ(50px); }
-.two   { transform: rotateY(90deg) translateZ(50px); }
-.three { transform: rotateY(180deg) translateZ(50px); }
-.four  { transform: rotateY(-90deg) translateZ(50px); }
-.five  { transform: rotateX(90deg) translateZ(50px); }
-.six   { transform: rotateX(-90deg) translateZ(50px); }
+.one   { transform: rotateY(0deg) translateZ(45px); }
+.two   { transform: rotateY(90deg) translateZ(45px); }
+.three { transform: rotateY(180deg) translateZ(45px); }
+.four  { transform: rotateY(-90deg) translateZ(45px); }
+.five  { transform: rotateX(90deg) translateZ(45px); }
+.six   { transform: rotateX(-90deg) translateZ(45px); }
 
 /* 入力 */
 input, textarea {
